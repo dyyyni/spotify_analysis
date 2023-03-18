@@ -12,23 +12,23 @@ Before you can get started with this project, you need to have Conda installed o
 ### Installing
 To get started with this project, follow these steps:
 
-Clone the repository to your local machine:
+1. Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/your_username/your_repository.git
 ```
-Navigate to the project directory:
+2. Navigate to the project directory:
 
 ```bash
 cd spotify_analysis
 ```
 
-Create a new Conda environment for the project:
+3. Create a new Conda environment for the project:
 
 ```bash
 conda env create -f environment.yml
 ```
-Activate the new Conda environment:
+4. Activate the new Conda environment:
 
 ```bash
 conda activate dans-spotify-analysis
