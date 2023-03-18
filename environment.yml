@@ -1,0 +1,14 @@
+name: dans-spotify-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - jupyter
+  - scikit-learn
+  - pip:
+    - spotipy
+    - pylint
