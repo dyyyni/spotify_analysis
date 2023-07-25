@@ -1,7 +1,6 @@
 from scripts import data_raw_to_interim
-import sys
-
-sys.path.insert(0, './scripts')
+from scripts import data_interim_to_overview
 
 def main():
-    data_raw_to_interim
+    data_raw_to_interim.main()
+    data_interim_to_overview.main()

@@ -1,6 +1,5 @@
 import json
 
-
 def load_data(path_to_data):
     with open(path_to_data, 'r') as file:
         data = json.load(file)
@@ -24,7 +23,7 @@ def time_listened(data):
 
     
 def main():
-    data = load_data('../data/interim/interim_data.json')
+    data = load_data('./data/interim/interim_data.json')
     overview_listened = time_listened(data)
     for key, value in overview_listened.items():
         print(key, int(value / 1000 / 60), "minutes")
