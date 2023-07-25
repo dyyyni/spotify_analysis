@@ -42,7 +42,7 @@ def main():
     plt.title('Total Listening by Year and Month')
     plt.ylabel('Year')
     plt.xlabel('Month')
-    plt.savefig('./reports/figures/total_by_year.png')
+    plt.savefig('./reports/figures/total_by_year.png', dpi=300)
 
 # Music Listening by Year and Month
     heatmap_data_music = pd.pivot_table(
@@ -67,7 +67,7 @@ def main():
     plt.title('Music Listening by Year and Month')
     plt.ylabel('Year')
     plt.xlabel('Month')
-    plt.savefig('./reports/figures/music_by_year.png')
+    plt.savefig('./reports/figures/music_by_year.png', dpi=300)
 
 # Podcast Listening by Year and Month
     heatmap_data_podcast = pd.pivot_table(
@@ -92,6 +92,6 @@ def main():
     plt.title('Podcast Listening by Year and Month')
     plt.ylabel('Year')
     plt.xlabel('Month')
-    plt.savefig('./reports/figures/podcast_by_year.png')
+    plt.savefig('./reports/figures/podcast_by_year.png', dpi=300)
 
 main()

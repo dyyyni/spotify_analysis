@@ -39,7 +39,7 @@ def main():
     plt.title('Total Listening by Weekday')
     plt.ylabel('Minutes')
     plt.xlabel('Weekday')
-    plt.savefig('./reports/figures/by_weekday.png')
+    plt.savefig('./reports/figures/by_weekday.png', dpi=300)
 
 main()
 
