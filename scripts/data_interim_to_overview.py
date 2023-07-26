@@ -26,5 +26,6 @@ def main():
     data = load_data('./data/interim/interim_data.json')
     overview_listened = time_listened(data)
     for key, value in overview_listened.items():
-        print(key, int(value / 1000 / 60), "minutes")
+        print(key, int(value / 1000 / 60), "minutes or", \
+              (int(value / 1000 / 60 / 60)), "hours.")
 main()
