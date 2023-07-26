@@ -18,10 +18,8 @@ def main():
     df_music = df[df['podcast'] == False]
     df_podcast = df[df['podcast'] == True]
 
-# Create a color palette
     cmap = sns.color_palette("Reds", as_cmap=True) 
 
-# Total Listening by Year and Month
     heatmap_data_total = pd.pivot_table(
         df,
         values='minutes_played',
@@ -44,7 +42,6 @@ def main():
     plt.xlabel('Month')
     plt.savefig('./reports/figures/total_by_year.png', dpi=300)
 
-# Music Listening by Year and Month
     heatmap_data_music = pd.pivot_table(
         df_music,
         values='minutes_played',
@@ -69,7 +66,6 @@ def main():
     plt.xlabel('Month')
     plt.savefig('./reports/figures/music_by_year.png', dpi=300)
 
-# Podcast Listening by Year and Month
     heatmap_data_podcast = pd.pivot_table(
         df_podcast,
         values='minutes_played',
