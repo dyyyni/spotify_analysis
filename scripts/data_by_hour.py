@@ -5,10 +5,9 @@ import matplotlib.pyplot as plt
 def main():
     df = pd.read_json("./data/interim/interim_data.json")
 
-    df['datetime'] = pd.to_datetime(df['timestamp'], unit='ms')
-    df = df.query('timestamp > 0 and datetime.dt.year >= 2020').copy()
+    df['timestamp'] = pd.to_datetime(df['ts'])
 
-    df['hour'] = df['datetime'].dt.hour
+    df['hour'] = df['timestamp'].dt.hour
     df['minutes_played'] = df['ms_played'] / 1000 / 60
     heatmap_data_hourly = pd.pivot_table(
         df,
@@ -17,7 +16,7 @@ def main():
         aggfunc='sum',
     ).fillna(0).astype(int)
 
-    plt.figure(figsize=(10, 3))
+    plt.figure(figsize=(10, 4))
     sns.heatmap(
         heatmap_data_hourly,
         cmap="Reds",

@@ -6,15 +6,13 @@ import calendar
 def main():
     df = pd.read_json("./data/interim/interim_data.json")
 
-    df['datetime'] = pd.to_datetime(df['timestamp'], unit='ms')
+    df['timestamp'] = pd.to_datetime(df['ts'])
 
     df['minutes_played'] = df['ms_played'] / 1000 / 60
 
-    df = df.query('timestamp > 0 and datetime.dt.year >= 2020').copy()
-
     day_dict = {i: day for i, day in enumerate(calendar.day_name)}
 
-    df['weekday'] = df['datetime'].dt.dayofweek
+    df['weekday'] = df['timestamp'].dt.dayofweek
     df['weekday'] = df['weekday'].map(day_dict)
 
     day_order = ['Monday', 'Tuesday',

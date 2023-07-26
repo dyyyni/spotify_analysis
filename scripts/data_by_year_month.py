@@ -5,20 +5,18 @@ import matplotlib.pyplot as plt
 def main():
     df = pd.read_json("./data/interim/interim_data.json")
 
-    df = df[df['timestamp'] != 0]
-
     df['minutes_played'] = (df['ms_played'] / 1000 / 60).astype(int)
-    df['timestamp'] = pd.to_datetime(df['timestamp'], unit='ms')
+
+    # Converting your timestamp from ISO format to datetime
+    df['timestamp'] = pd.to_datetime(df['ts'])
 
     df['year'] = df['timestamp'].dt.year
     df['month'] = df['timestamp'].dt.month
 
-    df = df[df['year'] >= 2020]
-
     df_music = df[df['podcast'] == False]
     df_podcast = df[df['podcast'] == True]
 
-    cmap = sns.color_palette("Reds", as_cmap=True) 
+    cmap = sns.color_palette("Reds", as_cmap=True)
 
     heatmap_data_total = pd.pivot_table(
         df,
@@ -91,3 +89,4 @@ def main():
     plt.savefig('./reports/figures/podcast_by_year.png', dpi=300)
 
 main()
+

@@ -24,7 +24,8 @@ def transform_raw_data(data):
      "artist_name": None,
      "album_name": None,
      "show_name": None,
-     "episode_name": None
+     "episode_name": None,
+     "ts": None
    }
 
   # To figure out if we are dealing with a song or a podcast
@@ -39,6 +40,7 @@ def transform_raw_data(data):
   interim_object["album_name"] = streamed_object["master_metadata_album_album_name"]
   interim_object["show_name"] = streamed_object["episode_show_name"]
   interim_object["episode_name"] = streamed_object["episode_name"]
+  interim_object['ts'] = streamed_object['ts']
 
   interim_data.append(interim_object)
 
