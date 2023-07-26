@@ -33,6 +33,22 @@ conda env create -f environment.yml
 ```bash
 conda activate dans-spotify-analysis
 ```
+### Get your Spotify fully wrapped
+
+1. Go to https://www.spotify.com/us/account/privacy/ and download your extended
+   streaming history. This might take up to 30 days.
+
+2. You will receive your streaming history in email by one or many .json files.
+
+3. Add these .json files to data/raw folder of this project.
+
+4. Run the following command
+
+```bash
+python main.py
+```
+5. Your data is now processed. You'll have an overview of your listens in the
+   command line. Figures can be found at ./reports/figures
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
