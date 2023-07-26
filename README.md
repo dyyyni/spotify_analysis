@@ -15,8 +15,9 @@ To get started with this project, follow these steps:
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your_username/your_repository.git
+git clone git@github.com:dyyyni/spotify_analysis.git
 ```
+
 2. Navigate to the project directory:
 
 ```bash
@@ -54,5 +55,4 @@ python main.py
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
-Thank you to the developers of Conda and Jupyter Notebook for making this project possible.
-Thank you to the Spotify API for providing access to my streaming data.
+Thanks EU and GDPR for making the tech giants bow to us for once.
