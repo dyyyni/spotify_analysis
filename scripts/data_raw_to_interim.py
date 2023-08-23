@@ -6,7 +6,7 @@ def load_raw_data():
 
   all_data = []
   for file in json_files:
-    with open(os.path.join(raw_data_path, file), 'r') as f:
+    with open(os.path.join(raw_data_path, file), 'r', encoding="utf8") as f:
       data = json.load(f)
       all_data.extend(data)
 
